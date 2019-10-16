@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import listOfCocktails from './cocktails.json';
+//import listOfCocktails from './cocktails.json';
 import axios from 'axios';
 
-let tenRandomURL =
+let tenPopularURL =
 	'https://www.thecocktaildb.com/api/json/v2/9973533/popular.php';
 
 class Home extends Component {
@@ -15,13 +15,13 @@ class Home extends Component {
 	}
 
 	componentDidMount() {
-		axios.get(tenRandomURL).then(res => {
+		axios.get(tenPopularURL).then(res => {
 			this.setState({ drinks: res.data.drinks });
 		});
 	}
 
 	render() {
-		//learned how to sort: https://www.sitepoint.com/sort-an-array-of-objects-in-javascript/
+		//learned how to sort an object by a given property: https://www.sitepoint.com/sort-an-array-of-objects-in-javascript/
 		function compare(a, b) {
 			// Use toUpperCase() to ignore character casing
 			const drinkA = a.strDrink.toUpperCase();
