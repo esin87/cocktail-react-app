@@ -33,15 +33,56 @@ class Cocktail extends Component {
 		// 	console.log(this.state.apiDrink);
 		// }
 
+		//possible to map over properties in return
+		//{this.state.apiDrink}
 		// getIngredients();
 		return (
-			<div className="cocktail">
-				<h1>{this.state.apiDrink.strDrink} </h1>
-				<img src={this.state.apiDrink.strDrinkThumb} alt="picture of drink" />
-				<ul>
-					<li>Served in: {this.state.apiDrink.strGlass}</li>
-					<li>Preparation: {this.state.apiDrink.strInstructions}</li>
-				</ul>
+			<div>
+				<h1 id="cocktail-name">{this.state.apiDrink.strDrink} </h1>
+				<div className="cocktail">
+					<div>
+						<img src={this.state.apiDrink.strDrinkThumb} />
+					</div>
+					<div>
+						<ul>
+							<li>Served in: {this.state.apiDrink.strGlass}</li>
+							<li>Preparation: {this.state.apiDrink.strInstructions}</li>
+							<ul>
+								Ingredients:
+								{this.state.apiDrink.strIngredient1 && (
+									<li>
+										{this.state.apiDrink.strIngredient1},{' '}
+										{this.state.apiDrink.strMeasure1}
+									</li>
+								)}
+								{this.state.apiDrink.strIngredient2 && (
+									<li>
+										{this.state.apiDrink.strIngredient2},{' '}
+										{this.state.apiDrink.strMeasure2}
+									</li>
+								)}
+								{this.state.apiDrink.strIngredient3 && (
+									<li>
+										{this.state.apiDrink.strIngredient3},{' '}
+										{this.state.apiDrink.strMeasure3}
+									</li>
+								)}
+								{this.state.apiDrink.strIngredient4 && (
+									<li>
+										{this.state.apiDrink.strIngredient4},{' '}
+										{this.state.apiDrink.strMeasure4}
+									</li>
+								)}
+								{this.state.apiDrink.strIngredient5 && (
+									<li>
+										{this.state.apiDrink.strIngredient5},{' '}
+										{this.state.apiDrink.strMeasure5}
+									</li>
+								)}
+							</ul>
+						</ul>
+					</div>
+				</div>
 			</div>
 		);
 	}

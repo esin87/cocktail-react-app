@@ -5,7 +5,13 @@ class About extends Component {
 	render() {
 		return (
 			<div>
-				<h1>Welcome to the about page</h1>
+				<p>
+					This page was created using React and the Cocktails DB APi found at
+					this{' '}
+					<a href="https://www.thecocktaildb.com/api.php" target="_blank">
+						link.
+					</a>
+				</p>
 			</div>
 		);
 	}

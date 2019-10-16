@@ -42,6 +42,12 @@ ul {
 .cocktail {
 	margin: 10px auto;
 	width: 800px;
+	display: flex;
+	flex-direction: row;
+}
+
+.cocktail div {
+	margin: 20px;
 }
 
 .cocktail ul {
@@ -52,4 +58,8 @@ ul {
 	display: block;
 	width: 300px;
 	margin: 15px auto;
+}
+
+#cocktail-name {
+	padding-left: 100px;
 }
